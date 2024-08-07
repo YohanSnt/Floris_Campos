@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -55,7 +56,7 @@ namespace Floris_Campos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Políticas de Privacidade, clique em 'OK' ");
 
 
 
@@ -105,6 +106,60 @@ namespace Floris_Campos
         {
             string name = txbName.Text;
             MessageBox.Show("NOME: " + name);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblObjective_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("CÓDIGO: 5443267");
+        }
+
+        private void cmbObjective_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbObjective.SelectedIndex == 1)
+            
+                lblPanel.Visible = false;
+            else 
+                lblPanel.Visible = true;
         }
     }
     }

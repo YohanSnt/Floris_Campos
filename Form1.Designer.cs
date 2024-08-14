@@ -37,32 +37,31 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblVegetables = new System.Windows.Forms.Label();
             this.lblPanel = new System.Windows.Forms.Panel();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblHome = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblHome = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pctMenu = new System.Windows.Forms.PictureBox();
+            this.checkbxRobot = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblFlowerCampos = new System.Windows.Forms.Label();
+            this.lblTab = new System.Windows.Forms.Label();
             this.lblPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubscribe
             // 
             this.btnSubscribe.BackColor = System.Drawing.Color.LightCoral;
             this.btnSubscribe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSubscribe.Location = new System.Drawing.Point(162, 225);
+            this.btnSubscribe.Location = new System.Drawing.Point(163, 248);
             this.btnSubscribe.Name = "btnSubscribe";
             this.btnSubscribe.Size = new System.Drawing.Size(77, 36);
             this.btnSubscribe.TabIndex = 0;
@@ -75,7 +74,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblName.Location = new System.Drawing.Point(22, 54);
+            this.lblName.Location = new System.Drawing.Point(23, 77);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(85, 13);
             this.lblName.TabIndex = 1;
@@ -85,7 +84,7 @@
             // txbName
             // 
             this.txbName.BackColor = System.Drawing.SystemColors.Info;
-            this.txbName.Location = new System.Drawing.Point(22, 70);
+            this.txbName.Location = new System.Drawing.Point(23, 93);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(206, 20);
             this.txbName.TabIndex = 2;
@@ -95,10 +94,11 @@
             // 
             this.lblFlowers.AutoSize = true;
             this.lblFlowers.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblFlowers.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFlowers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFlowers.Location = new System.Drawing.Point(687, 73);
+            this.lblFlowers.Location = new System.Drawing.Point(3, 45);
             this.lblFlowers.Name = "lblFlowers";
-            this.lblFlowers.Size = new System.Drawing.Size(35, 13);
+            this.lblFlowers.Size = new System.Drawing.Size(34, 13);
             this.lblFlowers.TabIndex = 7;
             this.lblFlowers.Text = "Flores";
             this.lblFlowers.Click += new System.EventHandler(this.lblObjective_Click);
@@ -108,11 +108,12 @@
             this.cmbObjective.BackColor = System.Drawing.SystemColors.Info;
             this.cmbObjective.FormattingEnabled = true;
             this.cmbObjective.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.cmbObjective.Location = new System.Drawing.Point(690, 89);
+            "DE SOMBRA",
+            "DE MEIA-SOMBRA",
+            "DE SOL"});
+            this.cmbObjective.Location = new System.Drawing.Point(6, 61);
             this.cmbObjective.Name = "cmbObjective";
-            this.cmbObjective.Size = new System.Drawing.Size(85, 21);
+            this.cmbObjective.Size = new System.Drawing.Size(113, 21);
             this.cmbObjective.TabIndex = 9;
             this.cmbObjective.SelectedIndexChanged += new System.EventHandler(this.cmbObjective_SelectedIndexChanged);
             // 
@@ -121,21 +122,27 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.comboBox1.Location = new System.Drawing.Point(690, 136);
+            "Hortaliças-Tuberosas",
+            "Hortaliças-Folhosas",
+            "Hortaliças-Flores",
+            "Hortaliças-Frutos",
+            "Hortaliças-Legumes",
+            "Hortaliças-Haste",
+            "Hortaliças-Raízes"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 116);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(85, 21);
+            this.comboBox1.Size = new System.Drawing.Size(113, 21);
             this.comboBox1.TabIndex = 11;
             // 
             // lblVegetables
             // 
             this.lblVegetables.AutoSize = true;
             this.lblVegetables.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblVegetables.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVegetables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblVegetables.Location = new System.Drawing.Point(687, 120);
+            this.lblVegetables.Location = new System.Drawing.Point(3, 100);
             this.lblVegetables.Name = "lblVegetables";
-            this.lblVegetables.Size = new System.Drawing.Size(54, 13);
+            this.lblVegetables.Size = new System.Drawing.Size(53, 13);
             this.lblVegetables.TabIndex = 10;
             this.lblVegetables.Text = "Hortaliças";
             this.lblVegetables.Click += new System.EventHandler(this.label1_Click_1);
@@ -144,6 +151,8 @@
             // 
             this.lblPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPanel.Controls.Add(this.lblTab);
+            this.lblPanel.Controls.Add(this.checkbxRobot);
             this.lblPanel.Controls.Add(this.lblHome);
             this.lblPanel.Controls.Add(this.lblPassword);
             this.lblPanel.Controls.Add(this.textBox2);
@@ -152,35 +161,28 @@
             this.lblPanel.Controls.Add(this.btnSubscribe);
             this.lblPanel.Controls.Add(this.lblName);
             this.lblPanel.Controls.Add(this.txbName);
-            this.lblPanel.Location = new System.Drawing.Point(270, 150);
+            this.lblPanel.Location = new System.Drawing.Point(283, 164);
             this.lblPanel.Name = "lblPanel";
-            this.lblPanel.Size = new System.Drawing.Size(257, 298);
+            this.lblPanel.Size = new System.Drawing.Size(257, 297);
             this.lblPanel.TabIndex = 12;
             this.lblPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.lblPanel_Paint);
             // 
-            // lblEmail
+            // lblHome
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEmail.Location = new System.Drawing.Point(22, 104);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(22, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 4;
+            this.lblHome.AutoSize = true;
+            this.lblHome.BackColor = System.Drawing.Color.Silver;
+            this.lblHome.Font = new System.Drawing.Font("Dutch801 XBd BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.Location = new System.Drawing.Point(61, 14);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(127, 14);
+            this.lblHome.TabIndex = 7;
+            this.lblHome.Text = "FAÇA SEU CADASTRO";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPassword.Location = new System.Drawing.Point(22, 167);
+            this.lblPassword.Location = new System.Drawing.Point(23, 190);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(41, 13);
             this.lblPassword.TabIndex = 5;
@@ -189,132 +191,71 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(22, 183);
+            this.textBox2.Location = new System.Drawing.Point(23, 206);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(206, 20);
             this.textBox2.TabIndex = 6;
             // 
-            // lblHome
+            // lblEmail
             // 
-            this.lblHome.AutoSize = true;
-            this.lblHome.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblHome.Font = new System.Drawing.Font("Dutch801 XBd BT", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHome.Location = new System.Drawing.Point(61, 17);
-            this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(127, 14);
-            this.lblHome.TabIndex = 7;
-            this.lblHome.Text = "FAÇA SEU CADASTRO";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEmail.Location = new System.Drawing.Point(23, 127);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email:";
             // 
-            // comboBox2
+            // textBox1
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.comboBox2.Location = new System.Drawing.Point(13, 342);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(85, 21);
-            this.comboBox2.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(10, 326);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Tipo";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.comboBox3.Location = new System.Drawing.Point(13, 295);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(85, 21);
-            this.comboBox3.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(10, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Objetivo";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.comboBox4.Location = new System.Drawing.Point(13, 245);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(85, 21);
-            this.comboBox4.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(10, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Tipo";
+            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Location = new System.Drawing.Point(23, 143);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // comboBox5
             // 
             this.comboBox5.BackColor = System.Drawing.SystemColors.Info;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "VENDA",
-            "COMPRA"});
-            this.comboBox5.Location = new System.Drawing.Point(13, 157);
+            "Caducifólias",
+            "Perenes"});
+            this.comboBox5.Location = new System.Drawing.Point(6, 181);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(85, 21);
+            this.comboBox5.Size = new System.Drawing.Size(113, 21);
             this.comboBox5.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label4.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(10, 141);
+            this.label4.Location = new System.Drawing.Point(6, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Objetivo";
+            this.label4.Text = "Árvores";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cmbObjective);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.lblVegetables);
             this.panel1.Controls.Add(this.lblMenu);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.lblFlowers);
             this.panel1.Controls.Add(this.comboBox5);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pctMenu);
-            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(675, 26);
+            this.panel1.Location = new System.Drawing.Point(-1, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(122, 412);
+            this.panel1.Size = new System.Drawing.Size(136, 661);
             this.panel1.TabIndex = 13;
             // 
             // lblMenu
@@ -338,19 +279,69 @@
             this.pctMenu.TabIndex = 21;
             this.pctMenu.TabStop = false;
             // 
+            // checkbxRobot
+            // 
+            this.checkbxRobot.AutoSize = true;
+            this.checkbxRobot.Location = new System.Drawing.Point(23, 259);
+            this.checkbxRobot.Name = "checkbxRobot";
+            this.checkbxRobot.Size = new System.Drawing.Size(107, 17);
+            this.checkbxRobot.TabIndex = 8;
+            this.checkbxRobot.Text = "Não sou um robô";
+            this.checkbxRobot.UseVisualStyleBackColor = true;
+            this.checkbxRobot.CheckedChanged += new System.EventHandler(this.checkbxRobot_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(126, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(598, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblFlowerCampos
+            // 
+            this.lblFlowerCampos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFlowerCampos.AutoSize = true;
+            this.lblFlowerCampos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFlowerCampos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFlowerCampos.Font = new System.Drawing.Font("Reem Kufi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlowerCampos.Location = new System.Drawing.Point(308, 36);
+            this.lblFlowerCampos.Name = "lblFlowerCampos";
+            this.lblFlowerCampos.Size = new System.Drawing.Size(214, 51);
+            this.lblFlowerCampos.TabIndex = 9;
+            this.lblFlowerCampos.Text = "Floris_Campos";
+            this.lblFlowerCampos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTab
+            // 
+            this.lblTab.AutoSize = true;
+            this.lblTab.BackColor = System.Drawing.SystemColors.Menu;
+            this.lblTab.Font = new System.Drawing.Font("Dutch801 XBd BT", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTab.Location = new System.Drawing.Point(46, 40);
+            this.lblTab.Name = "lblTab";
+            this.lblTab.Size = new System.Drawing.Size(155, 22);
+            this.lblTab.TabIndex = 9;
+            this.lblTab.Text = "Clique em \"TAB\" após o preenchimeto\r\n     dos dados de cada caixa de texto\r\n";
+            this.lblTab.Click += new System.EventHandler(this.label1_Click_2);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(810, 589);
-            this.Controls.Add(this.lblPanel);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lblVegetables);
-            this.Controls.Add(this.cmbObjective);
-            this.Controls.Add(this.lblFlowers);
+            this.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(720, 647);
+            this.Controls.Add(this.lblFlowerCampos);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblPanel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -362,6 +353,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,17 +374,15 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblHome;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.PictureBox pctMenu;
+        private System.Windows.Forms.CheckBox checkbxRobot;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFlowerCampos;
+        private System.Windows.Forms.Label lblTab;
     }
 }
 

@@ -99,13 +99,13 @@ namespace Floris_Campos
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            
-    }
+          
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             string name = txbName.Text;
-            MessageBox.Show("NOME: " + name);
+            MessageBox.Show("Cadastrado");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -160,6 +160,20 @@ namespace Floris_Campos
                 lblPanel.Visible = false;
             else 
                 lblPanel.Visible = true;
+
+            
+           
+
+        }
+
+        private void checkbxRobot_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Você confirma ter sentimentos?");
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
     }

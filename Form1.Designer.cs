@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnSubscribe = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -37,20 +38,21 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblVegetables = new System.Windows.Forms.Label();
             this.lblPanel = new System.Windows.Forms.Panel();
+            this.lblTab = new System.Windows.Forms.Label();
+            this.checkbxRobot = new System.Windows.Forms.CheckBox();
             this.lblHome = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbPassword = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
-            this.pctMenu = new System.Windows.Forms.PictureBox();
-            this.checkbxRobot = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFlowerCampos = new System.Windows.Forms.Label();
-            this.lblTab = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pctMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctMenu)).BeginInit();
@@ -155,17 +157,41 @@
             this.lblPanel.Controls.Add(this.checkbxRobot);
             this.lblPanel.Controls.Add(this.lblHome);
             this.lblPanel.Controls.Add(this.lblPassword);
-            this.lblPanel.Controls.Add(this.textBox2);
+            this.lblPanel.Controls.Add(this.txbPassword);
             this.lblPanel.Controls.Add(this.lblEmail);
-            this.lblPanel.Controls.Add(this.textBox1);
+            this.lblPanel.Controls.Add(this.txbEmail);
             this.lblPanel.Controls.Add(this.btnSubscribe);
             this.lblPanel.Controls.Add(this.lblName);
             this.lblPanel.Controls.Add(this.txbName);
-            this.lblPanel.Location = new System.Drawing.Point(283, 164);
+            this.lblPanel.Location = new System.Drawing.Point(424, 180);
             this.lblPanel.Name = "lblPanel";
             this.lblPanel.Size = new System.Drawing.Size(257, 297);
             this.lblPanel.TabIndex = 12;
             this.lblPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.lblPanel_Paint);
+            // 
+            // lblTab
+            // 
+            this.lblTab.AutoSize = true;
+            this.lblTab.BackColor = System.Drawing.SystemColors.Menu;
+            this.lblTab.Font = new System.Drawing.Font("Dutch801 XBd BT", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTab.Location = new System.Drawing.Point(46, 40);
+            this.lblTab.Name = "lblTab";
+            this.lblTab.Size = new System.Drawing.Size(155, 22);
+            this.lblTab.TabIndex = 9;
+            this.lblTab.Text = "Clique em \"TAB\" após o preenchimeto\r\n     dos dados de cada caixa de texto\r\n";
+            this.lblTab.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // checkbxRobot
+            // 
+            this.checkbxRobot.AutoSize = true;
+            this.checkbxRobot.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.checkbxRobot.Location = new System.Drawing.Point(23, 259);
+            this.checkbxRobot.Name = "checkbxRobot";
+            this.checkbxRobot.Size = new System.Drawing.Size(107, 17);
+            this.checkbxRobot.TabIndex = 8;
+            this.checkbxRobot.Text = "Não sou um robô";
+            this.checkbxRobot.UseVisualStyleBackColor = false;
+            this.checkbxRobot.CheckedChanged += new System.EventHandler(this.checkbxRobot_CheckedChanged);
             // 
             // lblHome
             // 
@@ -188,13 +214,13 @@
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Senha:";
             // 
-            // textBox2
+            // txbPassword
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(23, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 6;
+            this.txbPassword.BackColor = System.Drawing.SystemColors.Info;
+            this.txbPassword.Location = new System.Drawing.Point(23, 206);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Size = new System.Drawing.Size(206, 20);
+            this.txbPassword.TabIndex = 6;
             // 
             // lblEmail
             // 
@@ -206,13 +232,14 @@
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
             // 
-            // textBox1
+            // txbEmail
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(23, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 4;
+            this.txbEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txbEmail.Location = new System.Drawing.Point(23, 143);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(206, 20);
+            this.txbEmail.TabIndex = 4;
+            this.txbEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
             // comboBox5
             // 
@@ -255,40 +282,49 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(-1, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 661);
+            this.panel1.Size = new System.Drawing.Size(136, 609);
             this.panel1.TabIndex = 13;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Dutch801 XBd BT", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(31, 9);
+            this.lblMenu.Location = new System.Drawing.Point(31, 15);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(42, 14);
             this.lblMenu.TabIndex = 8;
             this.lblMenu.Text = "MENU";
             // 
+            // lblFlowerCampos
+            // 
+            this.lblFlowerCampos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFlowerCampos.AutoSize = true;
+            this.lblFlowerCampos.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFlowerCampos.Font = new System.Drawing.Font("Reem Kufi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlowerCampos.Location = new System.Drawing.Point(443, 32);
+            this.lblFlowerCampos.Name = "lblFlowerCampos";
+            this.lblFlowerCampos.Size = new System.Drawing.Size(212, 49);
+            this.lblFlowerCampos.TabIndex = 9;
+            this.lblFlowerCampos.Text = "Floris_Campos";
+            this.lblFlowerCampos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pctMenu
             // 
             this.pctMenu.Image = ((System.Drawing.Image)(resources.GetObject("pctMenu.Image")));
-            this.pctMenu.Location = new System.Drawing.Point(3, 3);
+            this.pctMenu.Location = new System.Drawing.Point(3, 9);
             this.pctMenu.Name = "pctMenu";
             this.pctMenu.Size = new System.Drawing.Size(22, 20);
             this.pctMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctMenu.TabIndex = 21;
             this.pctMenu.TabStop = false;
-            // 
-            // checkbxRobot
-            // 
-            this.checkbxRobot.AutoSize = true;
-            this.checkbxRobot.Location = new System.Drawing.Point(23, 259);
-            this.checkbxRobot.Name = "checkbxRobot";
-            this.checkbxRobot.Size = new System.Drawing.Size(107, 17);
-            this.checkbxRobot.TabIndex = 8;
-            this.checkbxRobot.Text = "Não sou um robô";
-            this.checkbxRobot.UseVisualStyleBackColor = true;
-            this.checkbxRobot.CheckedChanged += new System.EventHandler(this.checkbxRobot_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -298,45 +334,18 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(126, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(598, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(902, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblFlowerCampos
-            // 
-            this.lblFlowerCampos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFlowerCampos.AutoSize = true;
-            this.lblFlowerCampos.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFlowerCampos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFlowerCampos.Font = new System.Drawing.Font("Reem Kufi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFlowerCampos.Location = new System.Drawing.Point(308, 36);
-            this.lblFlowerCampos.Name = "lblFlowerCampos";
-            this.lblFlowerCampos.Size = new System.Drawing.Size(214, 51);
-            this.lblFlowerCampos.TabIndex = 9;
-            this.lblFlowerCampos.Text = "Floris_Campos";
-            this.lblFlowerCampos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTab
-            // 
-            this.lblTab.AutoSize = true;
-            this.lblTab.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblTab.Font = new System.Drawing.Font("Dutch801 XBd BT", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTab.Location = new System.Drawing.Point(46, 40);
-            this.lblTab.Name = "lblTab";
-            this.lblTab.Size = new System.Drawing.Size(155, 22);
-            this.lblTab.TabIndex = 9;
-            this.lblTab.Text = "Clique em \"TAB\" após o preenchimeto\r\n     dos dados de cada caixa de texto\r\n";
-            this.lblTab.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 647);
+            this.ClientSize = new System.Drawing.Size(1024, 595);
             this.Controls.Add(this.lblFlowerCampos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -370,9 +379,9 @@
         private System.Windows.Forms.Label lblVegetables;
         private System.Windows.Forms.Panel lblPanel;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label4;
@@ -383,6 +392,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblFlowerCampos;
         private System.Windows.Forms.Label lblTab;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

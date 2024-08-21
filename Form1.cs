@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.NetworkInformation;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,42 +58,18 @@ namespace Floris_Campos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Políticas de Privacidade, clique em 'OK' ");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            MessageBox.Show("Cookies: a gente usa cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa Política de Privacidade.","Termos de Privacidade", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
 
 
 
 
         }
-
         private void progressBar1_Click(object sender, EventArgs e)
         {
-
         }
-
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Alfabetizado!");
@@ -104,8 +82,12 @@ namespace Floris_Campos
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string name = txbName.Text;
-            MessageBox.Show("Cadastrado");
+            
+            MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk );
+            form2 novo = new form2();
+            novo.Show();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -155,7 +137,7 @@ namespace Floris_Campos
 
         private void cmbObjective_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbObjective.SelectedIndex == 1)
+            if(cmbObjective.SelectedIndex == 3)
             
                 lblPanel.Visible = false;
             else 
@@ -168,12 +150,37 @@ namespace Floris_Campos
 
         private void checkbxRobot_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Você confirma ter sentimentos?");
+            MessageBox.Show("Você confirma ter sentimentos?", "Não sou um robô", MessageBoxButtons.YesNo , MessageBoxIcon.Asterisk);
         }
 
         private void label1_Click_2(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click_1(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+       
+                timer1.Enabled = false;
+                this.Visible = false;
+
+              
+            }
+        }
     }
-    }
+    

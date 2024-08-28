@@ -16,5 +16,35 @@ namespace Floris_Campos
         {
             InitializeComponent();
         }
+
+        private void lblFlowers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVegetables_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Adicionado ao Carrinho", "Sucesso!",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+        }
+
+        private void form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

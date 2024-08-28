@@ -84,7 +84,7 @@
             // 
             // lblPanel
             // 
-            this.lblPanel.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblPanel.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.lblPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPanel.Controls.Add(this.lblTab);
             this.lblPanel.Controls.Add(this.checkbxRobot);

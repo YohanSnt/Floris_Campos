@@ -39,12 +39,10 @@
             this.lblVegetables = new System.Windows.Forms.Label();
             this.lblFlowers = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctMenu = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +69,7 @@
             this.lblMenu.AutoSize = true;
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Dutch801 XBd BT", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(31, 15);
+            this.lblMenu.Location = new System.Drawing.Point(43, 15);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(42, 14);
             this.lblMenu.TabIndex = 8;
@@ -91,9 +89,9 @@
             this.panel1.Controls.Add(this.comboBox5);
             this.panel1.Controls.Add(this.pctMenu);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(-3, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(137, 637);
+            this.panel1.Size = new System.Drawing.Size(141, 642);
             this.panel1.TabIndex = 18;
             // 
             // cmbObjective
@@ -104,7 +102,7 @@
             "DE SOMBRA",
             "DE MEIA-SOMBRA",
             "DE SOL"});
-            this.cmbObjective.Location = new System.Drawing.Point(6, 61);
+            this.cmbObjective.Location = new System.Drawing.Point(15, 61);
             this.cmbObjective.Name = "cmbObjective";
             this.cmbObjective.Size = new System.Drawing.Size(113, 21);
             this.cmbObjective.TabIndex = 9;
@@ -121,7 +119,7 @@
             "Hortaliças-Legumes",
             "Hortaliças-Haste",
             "Hortaliças-Raízes"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 116);
+            this.comboBox1.Location = new System.Drawing.Point(15, 116);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(113, 21);
             this.comboBox1.TabIndex = 11;
@@ -132,7 +130,7 @@
             this.lblVegetables.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lblVegetables.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVegetables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblVegetables.Location = new System.Drawing.Point(3, 100);
+            this.lblVegetables.Location = new System.Drawing.Point(12, 100);
             this.lblVegetables.Name = "lblVegetables";
             this.lblVegetables.Size = new System.Drawing.Size(53, 13);
             this.lblVegetables.TabIndex = 10;
@@ -144,7 +142,7 @@
             this.lblFlowers.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lblFlowers.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFlowers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFlowers.Location = new System.Drawing.Point(3, 45);
+            this.lblFlowers.Location = new System.Drawing.Point(12, 45);
             this.lblFlowers.Name = "lblFlowers";
             this.lblFlowers.Size = new System.Drawing.Size(34, 13);
             this.lblFlowers.TabIndex = 7;
@@ -157,10 +155,20 @@
             this.comboBox5.Items.AddRange(new object[] {
             "Caducifólias",
             "Perenes"});
-            this.comboBox5.Location = new System.Drawing.Point(6, 181);
+            this.comboBox5.Location = new System.Drawing.Point(15, 181);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(113, 21);
             this.comboBox5.TabIndex = 18;
+            // 
+            // pctMenu
+            // 
+            this.pctMenu.Image = ((System.Drawing.Image)(resources.GetObject("pctMenu.Image")));
+            this.pctMenu.Location = new System.Drawing.Point(9, 9);
+            this.pctMenu.Name = "pctMenu";
+            this.pctMenu.Size = new System.Drawing.Size(22, 20);
+            this.pctMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMenu.TabIndex = 21;
+            this.pctMenu.TabStop = false;
             // 
             // label4
             // 
@@ -168,57 +176,34 @@
             this.label4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label4.Font = new System.Drawing.Font("Gentium Basic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(6, 165);
+            this.label4.Location = new System.Drawing.Point(15, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "Árvores";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(128, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(939, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctMenu
-            // 
-            this.pctMenu.Image = ((System.Drawing.Image)(resources.GetObject("pctMenu.Image")));
-            this.pctMenu.Location = new System.Drawing.Point(3, 9);
-            this.pctMenu.Name = "pctMenu";
-            this.pctMenu.Size = new System.Drawing.Size(22, 20);
-            this.pctMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctMenu.TabIndex = 21;
-            this.pctMenu.TabStop = false;
-            // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Location = new System.Drawing.Point(178, 145);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(357, 279);
+            this.panel2.Size = new System.Drawing.Size(809, 279);
             this.panel2.TabIndex = 20;
             // 
             // form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Khaki;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1027, 594);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblFlowerCampos);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,7 +214,6 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblFlowerCampos;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.PictureBox pctMenu;
         private System.Windows.Forms.Panel panel1;

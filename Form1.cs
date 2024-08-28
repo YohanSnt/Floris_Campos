@@ -58,7 +58,7 @@ namespace Floris_Campos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Cookies: a gente usa cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa Política de Privacidade.","Termos de Privacidade", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Antes de abrir o programa, desejamos uma boa experiència e que você possa atender suas necessidades em busca de plantas e combinações para o seu jardim! \nBora lá?","Bem-Vindo ao Floris_Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
 
 
 
@@ -84,9 +84,10 @@ namespace Floris_Campos
         {
             
             MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk );
+            this.Visible = false;
             form2 novo = new form2();
-            novo.Show();
-
+            novo.ShowDialog();
+            this.Visible = true;
 
         }
 
@@ -137,12 +138,7 @@ namespace Floris_Campos
 
         private void cmbObjective_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbObjective.SelectedIndex == 3)
             
-                lblPanel.Visible = false;
-            else 
-                lblPanel.Visible = true;
-
             
            
 

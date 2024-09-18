@@ -25,11 +25,12 @@ namespace Floris_Campos
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-           this.Hide();
-           this.Visible = false;
-         
-            
-      
+
+            this.Hide();
+            this.Visible = false;
+
+
+
             //this.Visible = true;
         }
     }

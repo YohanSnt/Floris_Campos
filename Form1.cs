@@ -147,10 +147,11 @@ namespace Floris_Campos
         private void checkbxRobot_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Você será direcionado(a) para uma tela de confirmação", "Não sou um robô", MessageBoxButtons.OK , MessageBoxIcon.Asterisk);
-            this.Visible = false;
+           this.Hide();
             form3 novo = new form3();
-            novo.ShowDialog();
-            this.Visible = true;
+            novo.Show();
+            
+            
         }
 
         private void label1_Click_2(object sender, EventArgs e)

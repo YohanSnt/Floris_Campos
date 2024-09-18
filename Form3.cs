@@ -16,7 +16,8 @@ namespace Floris_Campos
         {
             InitializeComponent();
         }
-
+        
+      
         private void Form3_Load(object sender, EventArgs e)
         {
 
@@ -24,10 +25,12 @@ namespace Floris_Campos
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            form2 novo = new form2();
-            novo.ShowDialog();
-            this.Visible = true;
+           this.Hide();
+           this.Visible = false;
+         
+            
+      
+            //this.Visible = true;
         }
     }
 }

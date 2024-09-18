@@ -105,7 +105,7 @@
             // lblTab
             // 
             this.lblTab.AutoSize = true;
-            this.lblTab.BackColor = System.Drawing.Color.Silver;
+            this.lblTab.BackColor = System.Drawing.Color.LightGray;
             this.lblTab.Font = new System.Drawing.Font("Noto Sans Lisu", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTab.Location = new System.Drawing.Point(40, 50);
             this.lblTab.Name = "lblTab";

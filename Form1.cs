@@ -82,7 +82,15 @@ namespace Floris_Campos
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            string name = txbName.Text;
+            string email = txbEmail.Text;
+            string password = txbPassword.Text;
+
+            Property property;
+
+
+
+
             MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk );
             this.Visible = false;
             form2 novo = new form2();

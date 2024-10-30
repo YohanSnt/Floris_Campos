@@ -43,6 +43,11 @@
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lista = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +114,7 @@
             this.lblTab.Font = new System.Drawing.Font("Noto Sans Lisu", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTab.Location = new System.Drawing.Point(40, 50);
             this.lblTab.Name = "lblTab";
-            this.lblTab.Size = new System.Drawing.Size(173, 26);
+            this.lblTab.Size = new System.Drawing.Size(178, 26);
             this.lblTab.TabIndex = 9;
             this.lblTab.Text = " Clique em \"TAB\" após o preenchimeto     \r\n     dos dados de cada caixa de texto\r" +
     "\n";
@@ -155,8 +160,10 @@
             this.txbPassword.BackColor = System.Drawing.SystemColors.Info;
             this.txbPassword.Location = new System.Drawing.Point(22, 230);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(206, 20);
             this.txbPassword.TabIndex = 6;
+            this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // lblEmail
             // 
@@ -193,6 +200,41 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // lista
+            // 
+            this.lista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lista.HideSelection = false;
+            this.lista.Location = new System.Drawing.Point(12, 164);
+            this.lista.Name = "lista";
+            this.lista.Size = new System.Drawing.Size(359, 298);
+            this.lista.TabIndex = 14;
+            this.lista.UseCompatibleStateImageBehavior = false;
+            this.lista.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Código Usuário";
+            this.columnHeader1.Width = 88;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            this.columnHeader2.Width = 88;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Email";
+            this.columnHeader3.Width = 102;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Senha";
+            this.columnHeader4.Width = 110;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +242,7 @@
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 595);
+            this.Controls.Add(this.lista);
             this.Controls.Add(this.lblPanel);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -231,6 +274,11 @@
         private System.Windows.Forms.Label lblTab;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView lista;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 

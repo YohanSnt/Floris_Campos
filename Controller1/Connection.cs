@@ -18,11 +18,11 @@ namespace Floris_Campos
 
         public Connection()
         {
-            string stringConnection = @"PR2CJ3022625FLORISCAMPOS = " + Server
-            + "; Initial Catalog = " + DataBase
-            + ": User Id =" + Username
-            + ": Password =" + Password
-            + ": Encrypt = false";
+            string stringConnection = @"Server=" + Server
+     + "; Initial Catalog=" + DataBase
+     + "; User Id=" + Username
+     + "; Password=" + Password
+     + "; Encrypt=false";
 
             con = new SqlConnection(stringConnection);
             con.Open();

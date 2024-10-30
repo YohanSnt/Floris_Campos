@@ -8,12 +8,18 @@ namespace Floris_Campos
 {
     internal class Property
     {
-        public int CodClient { get; set; }
+        public int CodUsuario{ get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public Property (string name, string email, string password)
+        public Property (int codusuario, string name, string email, string password): 
+            this(name, email, password)
+        {
+           CodUsuario = codusuario;
+        }
+
+        public Property(string name, string email, string password)
         {
             Name = name;
             Email = email;

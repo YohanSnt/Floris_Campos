@@ -91,11 +91,16 @@ namespace Floris_Campos //Tela Principal
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             string name = txbName.Text;
             string email = txbEmail.Text;
             string password = txbPassword.Text;
 
-            Property property;
+            Property registro = new Property(name, email, password);
+
+            RegistroDAO registroDAO = new RegistroDAO();
+
+            registroDAO.Insert(registro);
 
 
 
@@ -105,6 +110,27 @@ namespace Floris_Campos //Tela Principal
             form2 novo = new form2();
             novo.ShowDialog();
             this.Visible = true;
+
+
+           
+              // Prosseguir
+               DialogResult  result = MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+              
+                if (result == DialogResult.Cancel) //Resultado para 'Cancelar' na mensagem
+                {
+                    // Fecha a mensagem
+                   this.Show();
+                }
+                else
+                {
+                    //Abre o form2
+                    this.Visible = false;
+                    form2 novo1 = new form2();
+                    novo1.ShowDialog();
+                    this.Visible = true;
+                }
+         
+          
 
         }
 
@@ -204,6 +230,11 @@ namespace Floris_Campos //Tela Principal
 
               
             }
+
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
     

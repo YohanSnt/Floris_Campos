@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace Floris_Campos
+namespace Floris_Campos //Tela Principal
 {
     public partial class frmMain : Form
     {
@@ -58,7 +58,16 @@ namespace Floris_Campos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Antes de abrir o programa, desejamos uma boa experiència e que você possa atender suas necessidades em busca de plantas e combinações para o seu jardim! \nBora lá?","Bem-Vindo ao Floris_Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+       
+
+            DialogResult result = MessageBox.Show("Antes de abrir o programa, desejamos uma boa experiència e que você possa atender suas necessidades em busca de plantas e " +
+        "combinações para o seu jardim! \nBora lá?", "Bem-Vindo ao Floris_Campos", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Mensagem de boas vindas
+
+            if ( result == DialogResult.No) //Resultado para 'Não' na mensagem
+            {
+                // Fecha o programa
+                Application.Exit();
+            }
 
 
 
@@ -72,7 +81,7 @@ namespace Floris_Campos
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Alfabetizado!");
+          
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -141,7 +150,7 @@ namespace Floris_Campos
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("CÓDIGO: 5443267");
+       
         }
 
         private void cmbObjective_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,12 +163,17 @@ namespace Floris_Campos
 
         private void checkbxRobot_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Você será direcionado(a) para uma tela de confirmação", "Não sou um robô", MessageBoxButtons.OK , MessageBoxIcon.Asterisk);
-           this.Hide();
-            form3 novo = new form3();
-            novo.Show();
-            
-            
+              MessageBox.Show("Você será direcionado(a) para uma tela de confirmação", "Não sou um robô", MessageBoxButtons.OK , MessageBoxIcon.Asterisk);
+
+           
+            this.Hide();
+           
+            form3 form3 = new form3();
+            form3.FormClosed += (s, args) => this.Show(); // Mostra o frmMain novamente quando form3 for fechado
+            form3.Show();
+
+
+
         }
 
         private void label1_Click_2(object sender, EventArgs e)

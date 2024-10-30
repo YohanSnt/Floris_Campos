@@ -109,7 +109,8 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.comboBox5.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "Caducifólias",
@@ -147,7 +148,8 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Hortaliças-Tuberosas",
@@ -164,7 +166,8 @@
             // 
             // cmbObjective
             // 
-            this.cmbObjective.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbObjective.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.cmbObjective.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cmbObjective.FormattingEnabled = true;
             this.cmbObjective.Items.AddRange(new object[] {
             "DE SOMBRA",

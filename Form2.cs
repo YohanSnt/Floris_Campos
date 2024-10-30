@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Floris_Campos
+namespace Floris_Campos //Tela de Vendas
 {
     public partial class form2 : Form
     {
@@ -39,7 +39,7 @@ namespace Floris_Campos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Adicionado ao Carrinho", "Sucesso!",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            MessageBox.Show("Adicionado ao Carrinho", "Sucesso!",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void form2_Load(object sender, EventArgs e)

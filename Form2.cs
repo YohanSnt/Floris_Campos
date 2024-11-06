@@ -51,5 +51,10 @@ namespace Floris_Campos //Tela de Vendas
         {
 
         }
+
+        private void cmbObjective_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

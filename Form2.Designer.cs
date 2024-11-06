@@ -177,6 +177,7 @@
             this.cmbObjective.Name = "cmbObjective";
             this.cmbObjective.Size = new System.Drawing.Size(113, 21);
             this.cmbObjective.TabIndex = 9;
+            this.cmbObjective.SelectedIndexChanged += new System.EventHandler(this.cmbObjective_SelectedIndexChanged);
             // 
             // pictureBox1
             // 

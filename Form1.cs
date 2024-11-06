@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -20,6 +21,12 @@ namespace Floris_Campos //Tela Principal
         {
             InitializeComponent();
         }
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -91,35 +98,39 @@ namespace Floris_Campos //Tela Principal
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             string name = txbName.Text;
             string email = txbEmail.Text;
             string password = txbPassword.Text;
+            
 
-            Property registro = new Property(name, email, password);
+            if (IsValidEmail(email))
+            {
+              MessageBox.Show ("E-mail válido.");
 
-            RegistroDAO registroDAO = new RegistroDAO();
+                Property registro = new Property(name, email, password);
 
-            registroDAO.Insert(registro);
+                RegistroDAO registroDAO = new RegistroDAO();
 
-
-
-
-            MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk );
-            this.Visible = false;
-            form2 novo = new form2();
-            novo.ShowDialog();
-            this.Visible = true;
+                registroDAO.Insert(registro);
 
 
-           
-              // Prosseguir
-               DialogResult  result = MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-              
+
+
+                MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                this.Visible = false;
+                form2 novo = new form2();
+                novo.ShowDialog();
+                this.Visible = true;
+
+
+
+                // Prosseguir
+                DialogResult result = MessageBox.Show("Nome Completo: " + txbName.Text + "\nEmail: " + txbEmail.Text + "\nSenha: " + txbPassword.Text, "Dados de Cadastro", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
                 if (result == DialogResult.Cancel) //Resultado para 'Cancelar' na mensagem
                 {
                     // Fecha a mensagem
-                   this.Show();
+                    this.Show();
                 }
                 else
                 {
@@ -129,6 +140,14 @@ namespace Floris_Campos //Tela Principal
                     novo1.ShowDialog();
                     this.Visible = true;
                 }
+
+            }
+            else
+            {
+                MessageBox.Show("E-mail inválido.");
+
+            }
+
          
           
 

@@ -1,6 +1,6 @@
 ﻿namespace Floris_Campos
 {
-    partial class frmMain
+    partial class FrmMain
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.btnSubscribe = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.txbName = new System.Windows.Forms.TextBox();
@@ -43,11 +43,6 @@
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lista = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -143,6 +138,7 @@
             this.lblHome.Size = new System.Drawing.Size(146, 23);
             this.lblHome.TabIndex = 7;
             this.lblHome.Text = "FAÇA SEU CADASTRO";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
             // 
             // lblPassword
             // 
@@ -154,6 +150,7 @@
             this.lblPassword.Size = new System.Drawing.Size(44, 19);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Senha:";
+            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // txbPassword
             // 
@@ -175,6 +172,7 @@
             this.lblEmail.Size = new System.Drawing.Size(40, 19);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // txbEmail
             // 
@@ -199,41 +197,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
-            // lista
-            // 
-            this.lista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lista.HideSelection = false;
-            this.lista.Location = new System.Drawing.Point(12, 164);
-            this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(359, 298);
-            this.lista.TabIndex = 14;
-            this.lista.UseCompatibleStateImageBehavior = false;
-            this.lista.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Código Usuário";
-            this.columnHeader1.Width = 88;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nome";
-            this.columnHeader2.Width = 88;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Email";
-            this.columnHeader3.Width = 102;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Senha";
-            this.columnHeader4.Width = 110;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // frmMain
             // 
@@ -242,7 +206,6 @@
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 595);
-            this.Controls.Add(this.lista);
             this.Controls.Add(this.lblPanel);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -274,11 +237,6 @@
         private System.Windows.Forms.Label lblTab;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView lista;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 

@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Drawing;
+using Floris_Campos.Controller;
+using Floris_Campos.Model;
 
 
 namespace Floris_Campos
@@ -142,5 +144,6 @@ namespace Floris_Campos
             return listaDeProperty;
         }
 
+      
+        }
     }
-}

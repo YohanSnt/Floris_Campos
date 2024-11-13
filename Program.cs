@@ -16,7 +16,7 @@ namespace Floris_Campos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new Form01());
         }
     }
 }

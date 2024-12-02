@@ -170,5 +170,13 @@ namespace Floris_Campos
         {
             UpdateListView();
         }
+
+        private void bttLimpar_Click(object sender, EventArgs e)
+        {
+           
+                ClearFields();
+
+            }
+        }
     }
-}
+

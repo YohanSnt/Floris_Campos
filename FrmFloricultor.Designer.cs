@@ -171,8 +171,10 @@ namespace Floris_Campos
             this.txbSenha.BackColor = System.Drawing.SystemColors.Info;
             this.txbSenha.Location = new System.Drawing.Point(123, 280);
             this.txbSenha.Name = "txbSenha";
+            this.txbSenha.PasswordChar = '*';
             this.txbSenha.Size = new System.Drawing.Size(268, 20);
             this.txbSenha.TabIndex = 24;
+            this.txbSenha.UseSystemPasswordChar = true;
             // 
             // bttSalvar
             // 
@@ -194,6 +196,7 @@ namespace Floris_Campos
             this.bttLimpar.TabIndex = 27;
             this.bttLimpar.Text = "Limpar";
             this.bttLimpar.UseVisualStyleBackColor = true;
+            this.bttLimpar.Click += new System.EventHandler(this.bttLimpar_Click);
             // 
             // bttEditar
             // 

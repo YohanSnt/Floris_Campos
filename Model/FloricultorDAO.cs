@@ -33,7 +33,7 @@ namespace Floris_Campos.Model
             Command.Connection = Connect.ReturnConnection();
             Command.CommandText =
             @"INSERT INTO 
-            Broker VALUES 
+            Floricultor VALUES 
             (@nome, @estado, @email, @senha)";
 
             Command.Parameters.AddWithValue("@nome", broker.Nome);
